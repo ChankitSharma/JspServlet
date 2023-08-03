@@ -28,4 +28,22 @@ public interface EmployeeDao {
 	public void saveRegistration(String firstname, String lastname, String username, String password, String address,
 			String contact);
 
+	/**
+	 * Checks if a username already exists in the database.
+	 *
+	 * @param username The username to check for existence.
+	 * @return `true` if the username exists, `false` otherwise.
+	 * @throws DataAccessException If there is an issue with the database connection or the query execution.
+	 */
+	public boolean isUserNameExists(String username);
+
+	/**
+	 * Checks if a contact number already exists in the database.
+	 *
+	 * @param contact The contact number to check for existence.
+	 * @return `true` if the contact number exists, `false` otherwise.
+	 * @throws DataAccessException If there is an issue with the database connection or the query execution.
+	 */
+	public boolean isContactExists(String contact);
+
 }
